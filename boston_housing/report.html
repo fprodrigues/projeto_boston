@@ -13189,7 +13189,7 @@ Tudo certo!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Importar as bibliotecas necessárias para este projeto</span>
@@ -13229,18 +13229,6 @@ Tudo certo!
 </div>
 </div>
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>C:\ProgramData\Anaconda3\lib\site-packages\sklearn\learning_curve.py:23: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the functions are moved. This module will be removed in 0.20
-  DeprecationWarning)
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13271,23 +13259,23 @@ Tudo certo!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Preço mínimo dos dados</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Preço máximo dos dados</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Preço médio dos dados</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Preço mediano dos dados</span>
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">median_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Desvio padrão do preço dos dados</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">std_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># Mostrar as estatísticas calculadas</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estatísticas para os dados dos imóveis de Boston:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -13318,7 +13306,7 @@ Preço mínimo: $105,000.00
 Preço máximo: $1,024,800.00
 Preço médio: $454,342.94
 Preço mediano: $438,900.00
-Desvio padrão dos preços: $165,340.28
+Desvio padrão dos preços: $165,171.13
 </pre>
 </div>
 </div>
@@ -13497,7 +13485,7 @@ Desvio padrão dos preços: $165,340.28
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta:</strong></p>
-<p>Sim, pq o R2 score se aproxima de 1, na verdade, o modelo está muito confiavél.</p>
+<p>Sim, pq o R2 score se aproxima de 1, na verdade, o modelo está muito confiavél. Sendo assim, isso significa que ele consegue, através do valor atual, ter uma estima muito próxima do valor alvo. Em outras palavras, os valores dados pelo modelo estão bem próximos dos dados coletados e esperados na vida real.</p>
 
 </div>
 </div>
@@ -13571,7 +13559,7 @@ Desvio padrão dos preços: $165,340.28
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta:</strong></p>
-<p>Não há maneira melhor de testar um modelo do que, testar com parte do próprio input do sistema. Assim sendo, garantindo a maior fidelidade do algoritmo.</p>
+<p>Não há maneira melhor de testar um modelo do que, testar com parte do próprio input do sistema. Assim sendo, garantindo a maior fidelidade do algoritmo. Claro que, não seria nenhum pouco pragmatico nem cientifico usar exatamente o mesmo conjunto de dados que treinaram o modelo para testá-lo. Por conta disso, é tão importante usando os dados de input dividi-los em dois conjuntos, aquele que será usado para treinar o sistema e aquele que vai testá-lo. Garantindo a mesma origem dos dois conjuntos e ainda assim, mantendo uma independência entre eles.</p>
 
 </div>
 </div>
@@ -13648,7 +13636,7 @@ Desvio padrão dos preços: $165,340.28
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta:</strong></p>
 <p>Como vemos na imagem 4, com um max_depth de 10, temos um score de praticamente 1. Contudo, manter o algoritmo com um número tão alto de ramos, faz ter um custo alto, por conta de, em cada ramo, ter que fazer o processamento de todos os dados novamente.</p>
-<p>No caso das curvas estarem muito abaixo, podemos sim, adicionar mais dados ou fazer mais ramos. Contudo, sempre lembrando que, toda adição é mais custosa ao sistema.</p>
+<p>No caso das curvas estarem muito abaixo, podemos sim, adicionar mais dados ou fazer mais ramos. Contudo, sempre lembrando que, toda adição é mais custosa ao sistema. Portanto, como as curvas (como vemos muito bem na curva de teste) tendem a um valor fixo, a adição de mais dados só se justificaria no caso da resolução de certos problemas do modelo.</p>
 
 </div>
 </div>
@@ -13790,6 +13778,9 @@ Pois a variância permanece menor que no ponto 10 e tem um bom score, próximo a
 <p><strong>Resposta:</strong></p>
 <p>Como ocorre um ajuste fino nos hiperparâmetros quando fazemos a busca em matriz (por exemplo), pode ser que, pelo ajuste se refletir diretamente em uma pequena porção dos dados, o modelo como um todo, perca um pouco da performance.</p>
 <p>A validação cruzada elimina essa distorção, porquanto, cria várias amostras diferentes dos dados de treinamento e teste, fazendo os ajustes em cada amostragem e depois, fazendo uma média.</p>
+<p>A validação por k-fold, funciona dividindo os dados de input em k conjuntos, dos quais, k-1 serão usados como treino para o modelo e o conjunto que sobrar, como teste. Esse processo é repetido novamente, agora com novos conjuntos, por exemplo, em um conjunto de 200 dados, o primeiro treino poderá ser feito com os dados de 1-180 e o teste com 181-200, no próximo ciclo, de 21-200 treino e 1-20 teste.
+Lembrando que, assim seguirá, até que a todo subconjunto de dado seja dada a oportunidade de servir como treino e como teste.</p>
+<p>Após as n repetições, o resultado será a média dos resultados individuais.</p>
 
 </div>
 </div>
@@ -14016,7 +14007,9 @@ Preço estimado para a casa do cliente 3: $931,636.36
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta:</strong></p>
-<p>Eu fiz um aproximado utilizando o desvio padrão e os valores encontrados no <strong>Explorando Dados</strong>, e os valores foram bem próximos, também acredito que minha interpretação sobre as variavéis 'RM', 'LSTAT' e 'PTRATIO' seja bem próxima da realidade.</p>
+<p>Eu fiz um aproximado utilizando o desvio padrão e os valores encontrados no <strong>Explorando Dados</strong>, e os valores foram bem próximos, também acredito que minha interpretação sobre as variavéis 'RM', 'LSTAT' e 'PTRATIO' seja bem próxima da realidade. Por exemplo, o fato da casa ter mais cômodos ser relevante, mas onde ela está localizada ainda mais.</p>
+<p>O caso do cliente 3 é o mais previsivél, já que todos as pontuações estão em margens "positivas", tem um RM grande, e LSTAT e PTRATIO baixos. Tem muitos quartos, poucos vizinhos classe baixa e poucos alunos por professor, o que garante mais atenção. Por isso o colocarei de lado.</p>
+<p>Os outros dois casos são mais interessantes, o cliente número 1 tem 5 quartos (RM alto), um índice relativamente baixo de vizinhos de classe baixa (LSTAT relativamente baixo) e o número de alunos por professor médio (PTRATIO médio), justificando estar bem próximos da mediana e da média dos dados coletados. Contudo, o caso 2, que contém um número bom de quartos (RM médio) e um número um maior de alunos por professor (PTRATIO médio), praticamente tem o valor de sua casa minorizado pelo fato de ter uma índice alto de vizinhos de classe baixa (LSTAT alta).</p>
 
 </div>
 </div>
